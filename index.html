@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechHub</title> 
+</head> 
+<style>
+  body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  }
+  /* Basic search bar styling */
+.search-section {
+  margin: 20px;
+  text-align: center;
+}
+
+#searchQuery {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#searchButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #45a049;
+}
+
+header {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(45deg, blue, purple, gold, aqua);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: blue;
+  overflow: hidden;
+}
+
+/* Header Text */
+header h1 {
+  font-size: 5rem;
+  z-index: 2;
+  text-align: left;
+  width: 500px
+}
+
+
+/* Animations */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 60%);
+  z-index: 1;
+  animation: pulse 5s infinite alternate;
+}
+
+/* Gradient Animation */
+@keyframes pulse {
+  0% {
+    background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 60%);
+  }
+  100% {
+    background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 60%);
+  }
+}
+
+/* Particle Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 40px 15px;
+  }
+}
+/* Navigation Bar Styling */
+.main-nav {
+  background-color: #4CAF50; /* Background color for the navigation bar */
+  padding: 15px 0; /* Padding inside the navigation bar */
+  margin-top: 20px; /* Space separating the navigation bar from the header */
+  text-align: center;
+  animation: colorChange 10s infinite; /* Apply the animation */
+}
+@keyframes colorChange {
+  0% { background-color: yellow; } 
+  25% { background-color: #F0E68C; }   /* Dark Gray */
+  50% { background-color: #FFD700; } /* Orange */
+  75% { background-color: #FFA500 } /* Teal */
+  100% { background-color: #4CAF50; } /* Green */
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Adds space between the links */
+}
+
+.main-nav ul li {
+  display: inline;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  background-color: #333; /* Dark background for the links */
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.main-nav ul li a:hover {
+  background-color: #555; /* Lighter background on hover */
+  opacity: 0.5;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+/* Footer Styling */
+.main-footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+.main-header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-header h1 {
+  margin: 0;
+}
+
+/* Section Styling (Shared for all sections) */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Home Section Styling */
+.home-section {
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+.home-section h2 {
+  color: #333;
+}
+
+/* About Section Styling */
+.phone-section {
+  background-color: #eee; /* Slightly darker gray */
+}
+
+.phone-section h2 {
+  color: #555;
+}
+
+/* Services Section Styling */
+.services-section {
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+}
+
+.services-section h2 {
+  color: #fff;
+}
+
+/* Contact Section Styling */
+.contact-section {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+}
+
+.contact-section h2 {
+  color: white;
+}
+
+/* Footer Styling */
+.main-footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+/* Footer Styling */
+.site-footer {
+  background-color: black; /* Footer background color */
+  color: white; /* Footer text color */
+  padding: 20px 0; /* Padding for spacing */
+  text-align: center; /* Center-align text */
+  position: relative; /* This keeps the footer at the bottom */
+  bottom: 0;
+  width: 100%; /* Ensures the footer stretches across the page */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+.results {
+      margin: 20px;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .results li {
+      margin-bottom: 10px;
+    }
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content nav ul li {
+  display: inline;
+}
+
+.footer-content nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-content nav ul li a:hover {
+  color: #ddd; /* Lighter color on hover */
+}
+
+/* Make footer responsive */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+</style>
+<body>
+  <header class="animated-header">
+    <h1>TechHub</h1>
+  </header>
+  <script src="TechHub\script.js"></script>
+  <section class="search-section">
+    <input type="text" id="searchQuery" placeholder="Search...">
+    <button id="searchButton">Search</button>
+  </section>
+  <!-- Display Results -->
+  <ul id="results" class="results"></ul>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="TechHub\gadgets and consumer electronics.html">Gadgets and Consumer Electronics</a></li>
+      <li><a href="TechHub\Software and apps.html">Software And Apps</a></li>
+      <li><a href="TechHub\ai and ml.html">AI & ML</a></li>
+      <li><a href="TechHub\Programming And Development.html">Programming And Development</a></li>
+    </ul>
+  </nav>
+  <section class="content-section">
+    <h2>Content Section</h2>
+    <p>This is some sample text to search. You can add more content here.</p>
+    <p>Another paragraph with more searchable text content.</p>
+    <p>Feel free to search for words like "sample" or "paragraph" to test the search functionality.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Your Website Name. All Rights Reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  
+
+
+</body>
+</html>

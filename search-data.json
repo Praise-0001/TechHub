@@ -1,0 +1,17 @@
+[
+  {
+    "title": "TechHub",
+    "url": "index.html",
+    "content": "This is some sample text to search. You can add more content here."
+  },
+  {
+    "title": "TechHub",
+    "url": "file:///C:/Users/Victor/Documents/Website/TechHub/phones.html",
+    "content": "Learn more about our team and mission on the about page."
+  },
+  {
+    "title": "Contact",
+    "url": "contact.html",
+    "content": "Get in touch with us through our contact form."
+  }
+]
